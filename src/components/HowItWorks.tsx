@@ -11,14 +11,14 @@ export const HowItWorks = () => {
     },
     {
       number: 2,
-      title: "Escolha o tema do artigo",
-      description: "Defina o assunto sobre o qual você deseja que seu artigo seja escrito.",
+      title: "Defina os detalhes do Web Stories",
+      description: "Escolha o tema e personalize os detalhes do seu Web Stories.",
       icon: <PenTool className="w-8 h-8 text-white" />
     },
     {
       number: 3,
-      title: "Receba no WhatsApp",
-      description: "Seu artigo será gerado e enviado diretamente para o seu WhatsApp em minutos.",
+      title: "Receba seu Web Stories no WhatsApp",
+      description: "Seu Web Stories será gerado e enviado diretamente para o seu WhatsApp em minutos.",
       icon: <MessageSquare className="w-8 h-8 text-white" />
     }
   ];
@@ -31,7 +31,7 @@ export const HowItWorks = () => {
             Como funciona em <span className="text-blue-600">3 passos simples</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Experimentar o Automatik Blog é rápido e fácil. Veja como você pode gerar seu primeiro artigo gratuitamente:
+            Gerar seu Web Stories é rápido e fácil. Veja como você pode criar seu primeiro Web Stories gratuitamente:
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export const HowItWorks = () => {
 
         <div className="text-center mt-12">
           <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-            Quero gerar meu artigo grátis
+            Gerar meu Web Stories grátis
           </button>
         </div>
       </div>
