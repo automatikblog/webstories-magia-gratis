@@ -7,6 +7,7 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { WebStoriesExamples } from "@/components/WebStoriesExamples";
 import { Testimonials } from "@/components/Testimonials";
 import { ThankYou } from "@/components/ThankYou";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -37,6 +38,7 @@ const Index = () => {
       <HowItWorks />
       <WebStoriesExamples />
       <Testimonials />
+      <Footer />
     </div>
   );
 };
