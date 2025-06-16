@@ -99,13 +99,18 @@ export const useFormSubmission = () => {
         if (timezoneInput) timezoneInput.value = timeZone;
         if (appPlanoInput) {
           appPlanoInput.value = blogWp === 'Sim'
-            ? 'https://app.automatikblog.com/webstoriesgratis'
+            ? 'https://app.automatikblog.com/test-webstories'
             : 'https://cadastro.automatikblog.com/webstories';
         }
         if (clickIdInput) {
           const cookieClickId = getCookieRaw('rtkclickid-store');
           clickIdInput.value = cookieClickId || clickId;
         }
+
+        console.log('Preenchendo formulário Mautic com os dados:', {
+          name, email, whatsapp, blogWp, utmSource, utmMedium, utmCampaign,
+          city, state, country, device, currentUrl
+        });
 
         // Submit Mautic form
         formElement.submit();
@@ -115,7 +120,14 @@ export const useFormSubmission = () => {
         
         toast({
           title: "Formulário enviado com sucesso!",
-          description: "Você será redirecionado para a próxima etapa onde poderá informar os detalhes do seu Web Stories.",
+          description: "Você receberá seu Web Stories no WhatsApp em breve.",
+        });
+      } else {
+        console.error('Formulário Mautic não encontrado!');
+        toast({
+          title: "Erro interno",
+          description: "Formulário não encontrado. Por favor, recarregue a página.",
+          variant: "destructive",
         });
       }
     } catch (error) {

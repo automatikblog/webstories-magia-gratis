@@ -10,7 +10,7 @@ import { useMauticIntegration, MauticHiddenForm } from "@/components/forms/Mauti
 import { useFormSubmission } from "@/components/forms/FormSubmission";
 
 interface LeadFormProps {
-  onSubmit: (redirectUrl: string) => void;
+  onSubmit?: (redirectUrl: string) => void;
 }
 
 export const LeadForm = ({ onSubmit }: LeadFormProps) => {
@@ -45,24 +45,6 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
     }
 
     await submitForm(formData, formData.getCookieRaw);
-    
-    // Determine redirect URL based on WordPress blog choice
-    let redirectUrl = '';
-    switch (formData.blogWp) {
-      case 'Sim':
-        redirectUrl = '/wordpress-users';
-        break;
-      case 'Não':
-        redirectUrl = '/non-wordpress-users';
-        break;
-      case 'interesse em criar':
-        redirectUrl = '/future-wordpress-users';
-        break;
-      default:
-        redirectUrl = '/thank-you';
-    }
-
-    onSubmit(redirectUrl);
   };
 
   if (formData.formSubmitted) {
@@ -70,10 +52,10 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
       <Card className="w-full max-w-md mx-auto shadow-lg border-2 border-automatik-purple/20">
         <CardContent className="p-8 text-center">
           <h3 className="text-2xl font-bold text-green-600 mb-4">
-            Formulário já enviado!
+            Formulário enviado com sucesso!
           </h3>
           <p className="text-gray-600">
-            Você já enviou o formulário nesta sessão. Verifique seu WhatsApp para receber seu Web Stories gratuito.
+            Você receberá seu Web Stories no WhatsApp em breve.
           </p>
         </CardContent>
       </Card>
@@ -149,7 +131,7 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
                 <SelectContent className="bg-white border border-gray-200 rounded-lg shadow-lg z-50">
                   <SelectItem value="Sim">Sim</SelectItem>
                   <SelectItem value="Não">Não</SelectItem>
-                  <SelectItem value="interesse em criar">Não, mas pret,endo criar</SelectItem>
+                  <SelectItem value="interesse em criar">Não, mas pretendo criar</SelectItem>
                 </SelectContent>
               </Select>
             </div>
