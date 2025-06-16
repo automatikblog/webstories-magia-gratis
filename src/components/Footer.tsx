@@ -9,7 +9,7 @@ export const Footer = () => {
           {/* Logo e Descrição */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-automatik-purple to-automatik-purple-light rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">AB</span>
               </div>
               <span className="text-xl font-bold text-white">Automatik Blog</span>

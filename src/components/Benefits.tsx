@@ -4,7 +4,7 @@ import { CheckCircle, Zap, MessageCircle, Globe } from "lucide-react";
 export const Benefits = () => {
   const benefits = [
     {
-      icon: <Zap className="w-8 h-8 text-blue-600" />,
+      icon: <Zap className="w-8 h-8 text-automatik-purple" />,
       title: "Criação Automática",
       description: "Web Stories gerados automaticamente com IA avançada"
     },
@@ -14,12 +14,12 @@ export const Benefits = () => {
       description: "Receba seu conteúdo diretamente no seu WhatsApp"
     },
     {
-      icon: <Globe className="w-8 h-8 text-purple-600" />,
+      icon: <Globe className="w-8 h-8 text-automatik-purple" />,
       title: "Otimizado para SEO",
       description: "Conteúdo otimizado para melhor rankeamento no Google"
     },
     {
-      icon: <CheckCircle className="w-8 h-8 text-blue-600" />,
+      icon: <CheckCircle className="w-8 h-8 text-automatik-purple" />,
       title: "100% Gratuito",
       description: "Teste completo sem custo, sem compromisso"
     }

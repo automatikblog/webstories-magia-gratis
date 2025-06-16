@@ -9,7 +9,7 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight text-left lg:text-left">
-              Gere seu <span className="text-blue-600">Web Stories</span> grátis agora
+              Gere seu <span className="text-automatik-purple">Web Stories</span> grátis agora
             </h1>
             <p className="text-xl lg:text-2xl text-gray-600 mb-8 leading-relaxed text-left lg:text-left">
               Experimente o <strong>Automatik Blog</strong> e receba seu conteúdo direto no WhatsApp
@@ -19,7 +19,7 @@ export const Hero = () => {
                 Transforme seus artigos em histórias visuais envolventes
               </p>
               <div className="flex justify-start">
-                <ArrowDown className="w-8 h-8 text-blue-600 animate-bounce" />
+                <ArrowDown className="w-8 h-8 text-automatik-purple animate-bounce" />
               </div>
             </div>
           </div>

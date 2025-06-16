@@ -28,7 +28,7 @@ export const WebStoriesExamples = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Exemplos de <span className="text-blue-600">Web Stories</span> criados
+            Exemplos de <span className="text-automatik-purple">Web Stories</span> criados
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Veja alguns exemplos de Web Stories que nossos usuários já criaram com o Automatik Blog
@@ -53,7 +53,7 @@ export const WebStoriesExamples = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
                       
                       <div className="absolute top-4 left-4">
-                        <span className="bg-blue-600 text-white px-3 py-1 text-xs font-bold rounded-full">
+                        <span className="bg-automatik-purple text-white px-3 py-1 text-xs font-bold rounded-full">
                           {example.category}
                         </span>
                       </div>
@@ -69,7 +69,7 @@ export const WebStoriesExamples = () => {
                         </div>
                       </div>
                       
-                      <div className="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute inset-0 bg-automatik-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                   </div>
                 </a>
@@ -82,7 +82,7 @@ export const WebStoriesExamples = () => {
           <p className="text-gray-600 mb-6">
             Quer criar Web Stories como estes? É simples e gratuito!
           </p>
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+          <button className="bg-gradient-to-r from-automatik-purple to-automatik-purple-light text-white px-8 py-3 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
             Criar meu Web Story grátis
           </button>
         </div>

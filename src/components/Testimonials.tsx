@@ -27,11 +27,11 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+    <section className="py-16 bg-gradient-to-br from-purple-50 to-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            O que nossos <span className="text-blue-600">clientes dizem</span>
+            O que nossos <span className="text-automatik-purple">clientes dizem</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Mais de 10.000 criadores de conteúdo já transformaram seus blogs com o Automatik Blog
@@ -76,7 +76,7 @@ export const Testimonials = () => {
           <div className="bg-white rounded-lg py-6 px-8 inline-block shadow-lg">
             <div className="flex items-center justify-center space-x-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">10.000+</div>
+                <div className="text-3xl font-bold text-automatik-purple">10.000+</div>
                 <div className="text-sm text-gray-600">Usuários ativos</div>
               </div>
               <div className="text-center">
@@ -84,7 +84,7 @@ export const Testimonials = () => {
                 <div className="text-sm text-gray-600">Web Stories criados</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600">4.9/5</div>
+                <div className="text-3xl font-bold text-automatik-purple">4.9/5</div>
                 <div className="text-sm text-gray-600">Avaliação média</div>
               </div>
             </div>

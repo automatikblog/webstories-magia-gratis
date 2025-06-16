@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -272,7 +271,7 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
 
   if (hasSubmitted) {
     return (
-      <Card className="w-full max-w-md mx-auto shadow-lg border-2 border-blue-100">
+      <Card className="w-full max-w-md mx-auto shadow-lg border-2 border-automatik-purple/20">
         <CardContent className="p-8 text-center">
           <h3 className="text-2xl font-bold text-green-600 mb-4">
             Formulário já enviado!
@@ -286,12 +285,12 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
   }
 
   return (
-    <Card className="w-full max-w-md mx-auto shadow-lg border-2 border-blue-100">
-      <CardHeader className="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-t-lg">
+    <Card className="w-full max-w-md mx-auto shadow-lg border-2 border-automatik-purple/20">
+      <CardHeader className="text-center bg-gradient-to-r from-automatik-purple to-automatik-purple-light text-white rounded-t-lg">
         <CardTitle className="text-2xl font-bold">
           Receba seu Web Stories GRÁTIS
         </CardTitle>
-        <p className="text-blue-100">
+        <p className="text-purple-100">
           Preencha os dados abaixo e receba no WhatsApp
         </p>
       </CardHeader>
@@ -307,7 +306,7 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
               placeholder="Seu nome completo"
               value={formData.fullName}
               onChange={(e) => setFormData(prev => ({ ...prev, fullName: e.target.value }))}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-automatik-purple focus:border-transparent"
               required
             />
           </div>
@@ -322,7 +321,7 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
               placeholder="seu@email.com"
               value={formData.email}
               onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-automatik-purple focus:border-transparent"
               required
             />
           </div>
@@ -337,7 +336,7 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
               placeholder="(11) 99999-9999"
               value={formData.whatsapp}
               onChange={handleWhatsAppChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-automatik-purple focus:border-transparent"
               required
             />
           </div>
@@ -347,7 +346,7 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
               Você tem blog em WordPress? *
             </Label>
             <Select value={formData.hasWordPressBlog} onValueChange={(value) => setFormData(prev => ({ ...prev, hasWordPressBlog: value }))}>
-              <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-automatik-purple focus:border-transparent">
                 <SelectValue placeholder="Selecione uma opção" />
               </SelectTrigger>
               <SelectContent className="bg-white border border-gray-200 rounded-lg shadow-lg z-50">
@@ -361,7 +360,7 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
           <Button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-lg text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+            className="w-full bg-gradient-to-r from-automatik-purple to-automatik-purple-light hover:from-automatik-purple-dark hover:to-automatik-purple text-white font-bold py-4 px-6 rounded-lg text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
           >
             {isLoading ? (
               <>

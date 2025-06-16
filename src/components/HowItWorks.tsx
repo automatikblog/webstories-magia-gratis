@@ -28,7 +28,7 @@ export const HowItWorks = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Como funciona em <span className="text-blue-600">3 passos simples</span>
+            Como funciona em <span className="text-automatik-purple">3 passos simples</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Gerar seu Web Stories é rápido e fácil. Veja como você pode criar seu primeiro Web Stories gratuitamente:
@@ -41,10 +41,10 @@ export const HowItWorks = () => {
               <div key={step.number} className="relative">
                 <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
                   <div className="relative mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-automatik-purple to-automatik-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
                       {step.icon}
                     </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-automatik-purple text-white rounded-full flex items-center justify-center font-bold text-sm">
                       {step.number}
                     </div>
                   </div>
@@ -60,7 +60,7 @@ export const HowItWorks = () => {
                 
                 {index < steps.length - 1 && (
                   <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 z-10">
-                    <div className="w-8 h-8 text-blue-600">
+                    <div className="w-8 h-8 text-automatik-purple">
                       <svg fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                       </svg>
@@ -73,7 +73,7 @@ export const HowItWorks = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+          <button className="bg-gradient-to-r from-automatik-purple to-automatik-purple-light text-white px-8 py-3 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
             Gerar meu Web Stories grátis
           </button>
         </div>
