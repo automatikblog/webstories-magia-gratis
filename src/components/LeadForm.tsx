@@ -54,9 +54,15 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
           <h3 className="text-2xl font-bold text-green-600 mb-4">
             Formulário enviado com sucesso!
           </h3>
-          <p className="text-gray-600">
+          <p className="text-gray-600 mb-4">
             Você receberá seu Web Stories no WhatsApp em breve.
           </p>
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
+            <p className="text-sm text-blue-700">
+              <strong>📋 Sobre sua demonstração:</strong><br />
+              O Web Stories gerado será uma demonstração que será publicada em nosso site para você visualizar a qualidade do trabalho. Você receberá o link para acessar e avaliar o resultado.
+            </p>
+          </div>
         </CardContent>
       </Card>
     );
@@ -74,6 +80,19 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
           </p>
         </CardHeader>
         <CardContent className="p-8">
+          {/* Aviso sobre a demonstração */}
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+            <div className="flex items-start">
+              <div className="text-yellow-600 text-lg mr-2">💡</div>
+              <div>
+                <h4 className="font-semibold text-yellow-800 mb-1">Sobre sua demonstração gratuita:</h4>
+                <p className="text-sm text-yellow-700">
+                  O Web Stories será criado como demonstração e publicado em nosso site para você avaliar a qualidade. Você receberá o link para visualizar o resultado.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
               <Label htmlFor="fullName" className="text-sm font-medium text-gray-700">
