@@ -12,7 +12,7 @@ export const useFormSubmission = () => {
 
   const submitForm = async (formData: any, getCookieRaw: (name: string) => string | undefined) => {
     const {
-      name, email, whatsapp, blogWp, setIsSubmitting, setFormSubmitted,
+      name, email, whatsapp, blogWp, blogGeraReceita, setIsSubmitting, setFormSubmitted,
       utmSource, utmMedium, utmCampaign, utmContent, utmTerm,
       city, state, country, device, currentUrl, clickId, referrer,
       userAgent, screenResolution, timeZone
@@ -62,6 +62,7 @@ export const useFormSubmission = () => {
         const emailInput = document.getElementById('mauticform_input_appwebstories_email') as HTMLInputElement;
         const phoneInput = document.getElementById('mauticform_input_appwebstories_telefone') as HTMLTextAreaElement;
         const blogWpSelect = document.getElementById('mauticform_input_appwebstories_app_blogwp') as HTMLSelectElement;
+        const blogGeraReceitaSelect = document.getElementById('mauticform_input_appwebstories_blog_gera_receita') as HTMLSelectElement;
         const utmSourceInput = document.getElementById('mauticform_input_appwebstories_utm_source') as HTMLTextAreaElement;
         const utmMediumInput = document.getElementById('mauticform_input_appwebstories_utm_medium') as HTMLTextAreaElement;
         const utmCampaignInput = document.getElementById('mauticform_input_appwebstories_utm_campaign') as HTMLTextAreaElement;
@@ -83,6 +84,7 @@ export const useFormSubmission = () => {
         if (emailInput) emailInput.value = email;
         if (phoneInput) phoneInput.value = whatsapp;
         if (blogWpSelect) blogWpSelect.value = blogWp;
+        if (blogGeraReceitaSelect) blogGeraReceitaSelect.value = blogGeraReceita;
         if (utmSourceInput) utmSourceInput.value = utmSource;
         if (utmMediumInput) utmMediumInput.value = utmMedium;
         if (utmCampaignInput) utmCampaignInput.value = utmCampaign;
@@ -108,7 +110,7 @@ export const useFormSubmission = () => {
         }
 
         console.log('Preenchendo formulário Mautic com os dados:', {
-          name, email, whatsapp, blogWp, utmSource, utmMedium, utmCampaign,
+          name, email, whatsapp, blogWp, blogGeraReceita, utmSource, utmMedium, utmCampaign,
           city, state, country, device, currentUrl
         });
 

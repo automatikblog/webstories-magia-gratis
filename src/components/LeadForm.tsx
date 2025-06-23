@@ -155,6 +155,23 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
               </Select>
             </div>
 
+            <div className="space-y-2">
+              <Label htmlFor="blogGeraReceita" className="text-sm font-medium text-gray-700">
+                Você já ganha dinheiro com seu blog ou pretende monetizar? *
+              </Label>
+              <Select value={formData.blogGeraReceita} onValueChange={(value) => formData.setBlogGeraReceita(value)}>
+                <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-automatik-purple focus:border-transparent">
+                  <SelectValue placeholder="Selecione uma opção" />
+                </SelectTrigger>
+                <SelectContent className="bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                  <SelectItem value="Já ganho atualmente">Já ganho atualmente</SelectItem>
+                  <SelectItem value="Ainda não, mas estou montando a estratégia">Ainda não, mas estou montando a estratégia</SelectItem>
+                  <SelectItem value="Tenho blog, mas não pretendo monetizar">Tenho blog, mas não pretendo monetizar</SelectItem>
+                  <SelectItem value="Ainda não tenho blog">Ainda não tenho blog</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
             <Button
               type="submit"
               disabled={formData.isSubmitting}
