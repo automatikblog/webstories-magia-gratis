@@ -20,6 +20,12 @@ export const useFormSubmission = () => {
 
     setIsSubmitting(true);
     
+    // Log específico para o campo gera_receita
+    console.log('=== DEBUG CAMPO GERA_RECEITA ===');
+    console.log('Valor do blogGeraReceita:', blogGeraReceita);
+    console.log('Valor do blogWp:', blogWp);
+    console.log('=====================================');
+    
     try {
       if (blogWp === 'Sim') {
         const hashedEmail = hashSHA256(email);
@@ -80,11 +86,41 @@ export const useFormSubmission = () => {
         const screenResolutionInput = document.getElementById('mauticform_input_appwebstories_screen_resolution') as HTMLTextAreaElement;
         const timezoneInput = document.getElementById('mauticform_input_appwebstories_timezone') as HTMLTextAreaElement;
 
+        // Debug específico para o campo gera_receita
+        console.log('=== DEBUG ELEMENTO GERA_RECEITA ===');
+        console.log('Elemento encontrado:', blogGeraReceitaSelect ? 'SIM' : 'NÃO');
+        if (blogGeraReceitaSelect) {
+          console.log('Valor atual do select:', blogGeraReceitaSelect.value);
+          console.log('Opções disponíveis:', Array.from(blogGeraReceitaSelect.options).map(opt => opt.value));
+        }
+        console.log('====================================');
+
         if (nameInput) nameInput.value = name;
         if (emailInput) emailInput.value = email;
         if (phoneInput) phoneInput.value = whatsapp;
         if (blogWpSelect) blogWpSelect.value = blogWp;
-        if (blogGeraReceitaSelect) blogGeraReceitaSelect.value = blogGeraReceita;
+        
+        // Preenchimento especial para o campo gera_receita com validação extra
+        if (blogGeraReceitaSelect) {
+          blogGeraReceitaSelect.value = blogGeraReceita || '';
+          
+          // Verificação adicional se o valor foi atribuído corretamente
+          console.log('=== VERIFICAÇÃO PÓS-ATRIBUIÇÃO ===');
+          console.log('Valor atribuído:', blogGeraReceita);
+          console.log('Valor atual do campo:', blogGeraReceitaSelect.value);
+          console.log('Valores coincidem:', blogGeraReceitaSelect.value === blogGeraReceita);
+          
+          // Se o valor não foi atribuído corretamente, tentar novamente
+          if (blogGeraReceitaSelect.value !== blogGeraReceita && blogGeraReceita) {
+            console.log('Tentando atribuir novamente...');
+            blogGeraReceitaSelect.selectedIndex = Array.from(blogGeraReceitaSelect.options).findIndex(opt => opt.value === blogGeraReceita);
+            console.log('Novo valor após selectedIndex:', blogGeraReceitaSelect.value);
+          }
+          console.log('================================');
+        } else {
+          console.error('ERRO: Campo blogGeraReceitaSelect não encontrado!');
+        }
+        
         if (utmSourceInput) utmSourceInput.value = utmSource;
         if (utmMediumInput) utmMediumInput.value = utmMedium;
         if (utmCampaignInput) utmCampaignInput.value = utmCampaign;
@@ -113,6 +149,12 @@ export const useFormSubmission = () => {
           name, email, whatsapp, blogWp, blogGeraReceita, utmSource, utmMedium, utmCampaign,
           city, state, country, device, currentUrl
         });
+
+        // Log final do estado do formulário antes do submit
+        console.log('=== ESTADO FINAL DO FORMULÁRIO ===');
+        console.log('blogWp final:', blogWpSelect?.value);
+        console.log('blogGeraReceita final:', blogGeraReceitaSelect?.value);
+        console.log('==================================');
 
         // Submit Mautic form
         formElement.submit();
