@@ -189,7 +189,22 @@ export const MauticHiddenForm = () => {
                 </select>
               </div>
               
-              <div id="mauticform_appwebstories_app_plano" className="mauticform-row mauticform-text mauticform-field-15">
+              <div id="mauticform_appwebstories_gera_receita" className="mauticform-row mauticform-select mauticform-field-15 mauticform-required">
+                <select 
+                  id="mauticform_input_appwebstories_gera_receita" 
+                  name="mauticform[gera_receita]" 
+                  defaultValue="" 
+                  className="mauticform-selectbox"
+                >
+                  <option value=""></option>
+                  <option value="Já ganho atualmente">Já ganho atualmente</option>
+                  <option value="Ainda não, mas estou montando a estratégia">Ainda não, mas estou montando a estratégia</option>
+                  <option value="Tenho blog, mas não pretendo monetizar">Tenho blog, mas não pretendo monetizar</option>
+                  <option value="Ainda não tenho blog">Ainda não tenho blog</option>
+                </select>
+              </div>
+              
+              <div id="mauticform_appwebstories_app_plano" className="mauticform-row mauticform-text mauticform-field-16">
                 <input 
                   id="mauticform_input_appwebstories_app_plano" 
                   name="mauticform[app_plano]" 
@@ -245,7 +260,7 @@ export const MauticHiddenForm = () => {
                 />
               </div>
               
-              <div id="mauticform_appwebstories_submit" className="mauticform-row mauticform-button-wrapper mauticform-field-16">
+              <div id="mauticform_appwebstories_submit" className="mauticform-row mauticform-button-wrapper mauticform-field-17">
                 <button 
                   type="submit" 
                   name="mauticform[submit]" 

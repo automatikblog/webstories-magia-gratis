@@ -62,7 +62,7 @@ export const useFormSubmission = () => {
         const emailInput = document.getElementById('mauticform_input_appwebstories_email') as HTMLInputElement;
         const phoneInput = document.getElementById('mauticform_input_appwebstories_telefone') as HTMLTextAreaElement;
         const blogWpSelect = document.getElementById('mauticform_input_appwebstories_app_blogwp') as HTMLSelectElement;
-        const blogGeraReceitaSelect = document.getElementById('mauticform_input_appwebstories_blog_gera_receita') as HTMLSelectElement;
+        const blogGeraReceitaSelect = document.getElementById('mauticform_input_appwebstories_gera_receita') as HTMLSelectElement;
         const utmSourceInput = document.getElementById('mauticform_input_appwebstories_utm_source') as HTMLTextAreaElement;
         const utmMediumInput = document.getElementById('mauticform_input_appwebstories_utm_medium') as HTMLTextAreaElement;
         const utmCampaignInput = document.getElementById('mauticform_input_appwebstories_utm_campaign') as HTMLTextAreaElement;
