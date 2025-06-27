@@ -163,8 +163,8 @@ export const useFormSubmission = () => {
         setFormSubmitted(true);
         
         toast({
-          title: "Formulário enviado com sucesso!",
-          description: "Você receberá seu Web Stories no WhatsApp em breve.",
+          title: "Cadastro realizado com sucesso!",
+          description: "Agora você será direcionado para inserir o link do seu artigo.",
         });
       } else {
         console.error('Formulário Mautic não encontrado!');

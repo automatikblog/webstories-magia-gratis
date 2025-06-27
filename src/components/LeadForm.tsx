@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -51,10 +52,10 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
       <Card id="lead-form" className="w-full max-w-md mx-auto shadow-lg border-2 border-automatik-purple/20">
         <CardContent className="p-8 text-center">
           <h3 className="text-2xl font-bold text-green-600 mb-4">
-            Formulário enviado com sucesso!
+            Cadastro realizado com sucesso!
           </h3>
           <p className="text-gray-600 mb-4">
-            Você receberá seu Web Stories no WhatsApp em breve.
+            Agora você será direcionado para inserir o link do seu artigo.
           </p>
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
             <p className="text-sm text-blue-700">
@@ -179,7 +180,7 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
               {formData.isSubmitting ? (
                 <>
                   <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                  Gerando seu Web Stories...
+                  Processando seu cadastro...
                 </>
               ) : (
                 "Gerar Web Stories Grátis"

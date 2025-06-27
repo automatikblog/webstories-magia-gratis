@@ -1,5 +1,5 @@
 
-import { CheckCircle, MessageSquare, PenTool } from "lucide-react";
+import { CheckCircle, MessageSquare, Link } from "lucide-react";
 
 export const HowItWorks = () => {
   const scrollToForm = () => {
@@ -18,9 +18,9 @@ export const HowItWorks = () => {
     },
     {
       number: 2,
-      title: "Defina os detalhes do Web Stories",
-      description: "Escolha o tema e personalize os detalhes do seu Web Stories.",
-      icon: <PenTool className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+      title: "Insira o link do artigo",
+      description: "Forneça o link do artigo que você deseja transformar em Web Stories.",
+      icon: <Link className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
     },
     {
       number: 3,
