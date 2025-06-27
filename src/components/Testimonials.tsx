@@ -6,7 +6,7 @@ export const Testimonials = () => {
     {
       name: "Maria Silva",
       role: "Proprietária de Blog de Culinária",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=faces&auto=format",
       content: "O Automatik Blog revolucionou meu blog! Agora consigo criar Web Stories incríveis em minutos. Meu tráfego aumentou 300% em apenas 2 meses.",
       rating: 5
     },
@@ -20,7 +20,7 @@ export const Testimonials = () => {
     {
       name: "Ana Costa",
       role: "Blogueira de Lifestyle",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces&auto=format",
       content: "Uso o Automatik Blog há 6 meses e não consigo mais trabalhar sem ele. A facilidade de criar conteúdo visual é incrível!",
       rating: 5
     }
