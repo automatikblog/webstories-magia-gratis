@@ -2,6 +2,13 @@
 import { ExternalLink } from "lucide-react";
 
 export const WebStoriesExamples = () => {
+  const scrollToForm = () => {
+    const formElement = document.querySelector('#lead-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const examples = [
     {
       title: "Descubra como Google vai transformar a educação no Brasil com IA",
@@ -82,7 +89,10 @@ export const WebStoriesExamples = () => {
           <p className="text-gray-600 mb-6">
             Quer criar Web Stories como estes? É simples e gratuito!
           </p>
-          <button className="bg-gradient-to-r from-automatik-purple to-automatik-purple-light text-white px-8 py-3 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+          <button 
+            onClick={scrollToForm}
+            className="bg-gradient-to-r from-automatik-purple to-automatik-purple-light text-white px-8 py-3 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+          >
             Criar meu Web Story grátis
           </button>
         </div>

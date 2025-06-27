@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -49,7 +48,7 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
 
   if (formData.formSubmitted) {
     return (
-      <Card className="w-full max-w-md mx-auto shadow-lg border-2 border-automatik-purple/20">
+      <Card id="lead-form" className="w-full max-w-md mx-auto shadow-lg border-2 border-automatik-purple/20">
         <CardContent className="p-8 text-center">
           <h3 className="text-2xl font-bold text-green-600 mb-4">
             Formulário enviado com sucesso!
@@ -70,7 +69,7 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
 
   return (
     <>
-      <Card className="w-full max-w-md mx-auto shadow-lg border-2 border-automatik-purple/20">
+      <Card id="lead-form" className="w-full max-w-md mx-auto shadow-lg border-2 border-automatik-purple/20">
         <CardHeader className="text-center bg-gradient-to-r from-automatik-purple to-automatik-purple-light text-white rounded-t-lg">
           <CardTitle className="text-2xl font-bold">
             Receba seu Web Stories GRÁTIS

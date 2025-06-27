@@ -2,6 +2,13 @@
 import { CheckCircle, MessageSquare, PenTool } from "lucide-react";
 
 export const HowItWorks = () => {
+  const scrollToForm = () => {
+    const formElement = document.querySelector('#lead-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const steps = [
     {
       number: 1,
@@ -73,7 +80,10 @@ export const HowItWorks = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-automatik-purple to-automatik-purple-light text-white px-8 py-3 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+          <button 
+            onClick={scrollToForm}
+            className="bg-gradient-to-r from-automatik-purple to-automatik-purple-light text-white px-8 py-3 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+          >
             Gerar meu Web Stories grátis
           </button>
         </div>
