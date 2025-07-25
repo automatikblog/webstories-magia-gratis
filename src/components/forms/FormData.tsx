@@ -68,7 +68,7 @@ export const useFormData = () => {
     setUtmCampaign(urlParams.get('utm_campaign') || '');
     setUtmContent(urlParams.get('utm_content') || '');
     setUtmTerm(urlParams.get('utm_term') || '');
-    setClickId(getCookieRaw('rtkclickid-store') || '');
+    setClickId(getCookieRaw('mcclickid-store') || '');
   };
 
   // Function to get location data
