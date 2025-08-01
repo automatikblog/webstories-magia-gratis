@@ -12,7 +12,7 @@ export const useFormSubmission = () => {
 
   const submitForm = async (formData: any, getCookieRaw: (name: string) => string | undefined) => {
     const {
-      name, email, whatsapp, blogWp, blogGeraReceita, perfil, setIsSubmitting, setFormSubmitted,
+      name, email, whatsapp, blogWp, perfil, setIsSubmitting, setFormSubmitted,
       utmSource, utmMedium, utmCampaign, utmContent, utmTerm,
       city, state, country, device, currentUrl, clickId, referrer,
       userAgent, screenResolution, timeZone
@@ -20,14 +20,13 @@ export const useFormSubmission = () => {
 
     setIsSubmitting(true);
     
-    // Log específico para o campo gera_receita
-    console.log('=== DEBUG CAMPO GERA_RECEITA ===');
-    console.log('Valor do blogGeraReceita:', blogGeraReceita);
+    console.log('=== DEBUG FORMULÁRIO ===');
     console.log('Valor do blogWp:', blogWp);
-    console.log('=====================================');
+    console.log('Valor do perfil:', perfil);
+    console.log('========================');
     
     try {
-      if (blogWp === 'Sim') {
+      if (blogWp === 'WordPress') {
         const hashedEmail = hashSHA256(email);
         const hashedPhone = hashSHA256(whatsapp);
         
@@ -68,7 +67,6 @@ export const useFormSubmission = () => {
         const emailInput = document.getElementById('mauticform_input_appwebstories_email') as HTMLInputElement;
         const phoneInput = document.getElementById('mauticform_input_appwebstories_telefone') as HTMLTextAreaElement;
         const blogWpSelect = document.getElementById('mauticform_input_appwebstories_app_blogwp') as HTMLSelectElement;
-        const blogGeraReceitaSelect = document.getElementById('mauticform_input_appwebstories_gera_receita') as HTMLSelectElement;
         const perfilSelect = document.getElementById('mauticform_input_appwebstories_perfil') as HTMLSelectElement;
         const utmSourceInput = document.getElementById('mauticform_input_appwebstories_utm_source') as HTMLTextAreaElement;
         const utmMediumInput = document.getElementById('mauticform_input_appwebstories_utm_medium') as HTMLTextAreaElement;
@@ -87,40 +85,10 @@ export const useFormSubmission = () => {
         const screenResolutionInput = document.getElementById('mauticform_input_appwebstories_screen_resolution') as HTMLTextAreaElement;
         const timezoneInput = document.getElementById('mauticform_input_appwebstories_timezone') as HTMLTextAreaElement;
 
-        // Debug específico para o campo gera_receita
-        console.log('=== DEBUG ELEMENTO GERA_RECEITA ===');
-        console.log('Elemento encontrado:', blogGeraReceitaSelect ? 'SIM' : 'NÃO');
-        if (blogGeraReceitaSelect) {
-          console.log('Valor atual do select:', blogGeraReceitaSelect.value);
-          console.log('Opções disponíveis:', Array.from(blogGeraReceitaSelect.options).map(opt => opt.value));
-        }
-        console.log('====================================');
-
         if (nameInput) nameInput.value = name;
         if (emailInput) emailInput.value = email;
         if (phoneInput) phoneInput.value = whatsapp;
         if (blogWpSelect) blogWpSelect.value = blogWp;
-        
-        // Preenchimento especial para o campo gera_receita com validação extra
-        if (blogGeraReceitaSelect) {
-          blogGeraReceitaSelect.value = blogGeraReceita || '';
-          
-          // Verificação adicional se o valor foi atribuído corretamente
-          console.log('=== VERIFICAÇÃO PÓS-ATRIBUIÇÃO ===');
-          console.log('Valor atribuído:', blogGeraReceita);
-          console.log('Valor atual do campo:', blogGeraReceitaSelect.value);
-          console.log('Valores coincidem:', blogGeraReceitaSelect.value === blogGeraReceita);
-          
-          // Se o valor não foi atribuído corretamente, tentar novamente
-          if (blogGeraReceitaSelect.value !== blogGeraReceita && blogGeraReceita) {
-            console.log('Tentando atribuir novamente...');
-            blogGeraReceitaSelect.selectedIndex = Array.from(blogGeraReceitaSelect.options).findIndex(opt => opt.value === blogGeraReceita);
-            console.log('Novo valor após selectedIndex:', blogGeraReceitaSelect.value);
-          }
-          console.log('================================');
-        } else {
-          console.error('ERRO: Campo blogGeraReceitaSelect não encontrado!');
-        }
         
         // Preenchimento do campo perfil
         if (perfilSelect) {
@@ -148,7 +116,7 @@ export const useFormSubmission = () => {
         if (screenResolutionInput) screenResolutionInput.value = screenResolution;
         if (timezoneInput) timezoneInput.value = timeZone;
         if (appPlanoInput) {
-          appPlanoInput.value = blogWp === 'Sim'
+          appPlanoInput.value = blogWp === 'WordPress'
             ? 'https://app.automatikblog.com/test-webstories'
             : 'https://cadastro.automatikblog.com/webstories';
         }
@@ -158,14 +126,14 @@ export const useFormSubmission = () => {
         }
 
         console.log('Preenchendo formulário Mautic com os dados:', {
-          name, email, whatsapp, blogWp, blogGeraReceita, perfil, utmSource, utmMedium, utmCampaign,
+          name, email, whatsapp, blogWp, perfil, utmSource, utmMedium, utmCampaign,
           city, state, country, device, currentUrl
         });
 
         // Log final do estado do formulário antes do submit
         console.log('=== ESTADO FINAL DO FORMULÁRIO ===');
         console.log('blogWp final:', blogWpSelect?.value);
-        console.log('blogGeraReceita final:', blogGeraReceitaSelect?.value);
+        console.log('perfil final:', perfilSelect?.value);
         console.log('==================================');
 
         // Submit Mautic form

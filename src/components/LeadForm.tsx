@@ -141,33 +141,24 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
 
             <div className="space-y-2">
               <Label htmlFor="hasWordPressBlog" className="text-sm font-medium text-gray-700">
-                Você tem blog em WordPress? *
+                Qual plataforma você usa para seu blog? *
               </Label>
               <Select value={formData.blogWp} onValueChange={(value) => formData.setBlogWp(value)}>
                 <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-automatik-purple focus:border-transparent">
                   <SelectValue placeholder="Selecione uma opção" />
                 </SelectTrigger>
                 <SelectContent className="bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                  <SelectItem value="Sim">Sim</SelectItem>
-                  <SelectItem value="Não">Não</SelectItem>
-                  <SelectItem value="interesse em criar">Não, mas pretendo criar</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="blogGeraReceita" className="text-sm font-medium text-gray-700">
-                Você já ganha dinheiro com seu blog ou pretende monetizar? *
-              </Label>
-              <Select value={formData.blogGeraReceita} onValueChange={(value) => formData.setBlogGeraReceita(value)}>
-                <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-automatik-purple focus:border-transparent">
-                  <SelectValue placeholder="Selecione uma opção" />
-                </SelectTrigger>
-                <SelectContent className="bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                  <SelectItem value="Já ganho atualmente">Já ganho atualmente</SelectItem>
-                  <SelectItem value="Ainda não, mas estou montando a estratégia">Ainda não, mas estou montando a estratégia</SelectItem>
-                  <SelectItem value="Tenho blog, mas não pretendo monetizar">Tenho blog, mas não pretendo monetizar</SelectItem>
-                  <SelectItem value="Ainda não tenho blog">Ainda não tenho blog</SelectItem>
+                  <SelectItem value="WordPress">WordPress</SelectItem>
+                  <SelectItem value="Blogger">Blogger</SelectItem>
+                  <SelectItem value="Wix">Wix</SelectItem>
+                  <SelectItem value="Shopify">Shopify</SelectItem>
+                  <SelectItem value="Squarespace">Squarespace</SelectItem>
+                  <SelectItem value="Ghost">Ghost</SelectItem>
+                  <SelectItem value="Medium">Medium</SelectItem>
+                  <SelectItem value="Notion">Notion</SelectItem>
+                  <SelectItem value="Webflow">Webflow</SelectItem>
+                  <SelectItem value="Não tenho blog">Não tenho blog</SelectItem>
+                  <SelectItem value="Não tenho, mas pretendo criar">Não tenho, mas pretendo criar</SelectItem>
                 </SelectContent>
               </Select>
             </div>

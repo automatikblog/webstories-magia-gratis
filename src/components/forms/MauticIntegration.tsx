@@ -183,24 +183,17 @@ export const MauticHiddenForm = () => {
                   className="mauticform-selectbox"
                 >
                   <option value=""></option>
-                  <option value="Sim">Sim</option>
-                  <option value="Não">Não</option>
-                  <option value="interesse em criar">Não, mas pretendo criar</option>
-                </select>
-              </div>
-              
-              <div id="mauticform_appwebstories_gera_receita" className="mauticform-row mauticform-select mauticform-field-15 mauticform-required">
-                <select 
-                  id="mauticform_input_appwebstories_gera_receita" 
-                  name="mauticform[gera_receita]" 
-                  defaultValue="" 
-                  className="mauticform-selectbox"
-                >
-                  <option value=""></option>
-                  <option value="Já ganho atualmente">Já ganho atualmente</option>
-                  <option value="Ainda não, mas estou montando a estratégia">Ainda não, mas estou montando a estratégia</option>
-                  <option value="Tenho blog, mas não pretendo monetizar">Tenho blog, mas não pretendo monetizar</option>
-                  <option value="Ainda não tenho blog">Ainda não tenho blog</option>
+                  <option value="WordPress">WordPress</option>
+                  <option value="Blogger">Blogger</option>
+                  <option value="Wix">Wix</option>
+                  <option value="Shopify">Shopify</option>
+                  <option value="Squarespace">Squarespace</option>
+                  <option value="Ghost">Ghost</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Notion">Notion</option>
+                  <option value="Webflow">Webflow</option>
+                  <option value="Não tenho blog">Não tenho blog</option>
+                  <option value="Não tenho, mas pretendo criar">Não tenho, mas pretendo criar</option>
                 </select>
               </div>
               
