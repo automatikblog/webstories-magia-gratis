@@ -186,14 +186,9 @@ export const MauticHiddenForm = () => {
                   <option value="WordPress">WordPress</option>
                   <option value="Blogger">Blogger</option>
                   <option value="Wix">Wix</option>
-                  <option value="Shopify">Shopify</option>
-                  <option value="Squarespace">Squarespace</option>
-                  <option value="Ghost">Ghost</option>
-                  <option value="Medium">Medium</option>
-                  <option value="Notion">Notion</option>
-                  <option value="Webflow">Webflow</option>
                   <option value="Não tenho blog">Não tenho blog</option>
                   <option value="Não tenho, mas pretendo criar">Não tenho, mas pretendo criar</option>
+                  <option value="Outros">Outros</option>
                 </select>
               </div>
               

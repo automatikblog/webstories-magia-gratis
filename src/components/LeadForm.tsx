@@ -151,14 +151,9 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
                   <SelectItem value="WordPress">WordPress</SelectItem>
                   <SelectItem value="Blogger">Blogger</SelectItem>
                   <SelectItem value="Wix">Wix</SelectItem>
-                  <SelectItem value="Shopify">Shopify</SelectItem>
-                  <SelectItem value="Squarespace">Squarespace</SelectItem>
-                  <SelectItem value="Ghost">Ghost</SelectItem>
-                  <SelectItem value="Medium">Medium</SelectItem>
-                  <SelectItem value="Notion">Notion</SelectItem>
-                  <SelectItem value="Webflow">Webflow</SelectItem>
                   <SelectItem value="Não tenho blog">Não tenho blog</SelectItem>
                   <SelectItem value="Não tenho, mas pretendo criar">Não tenho, mas pretendo criar</SelectItem>
+                  <SelectItem value="Outros">Outros</SelectItem>
                 </SelectContent>
               </Select>
             </div>
