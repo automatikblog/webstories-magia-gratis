@@ -12,7 +12,7 @@ export const useFormSubmission = () => {
 
   const submitForm = async (formData: any, getCookieRaw: (name: string) => string | undefined) => {
     const {
-      name, email, whatsapp, blogWp, blogGeraReceita, setIsSubmitting, setFormSubmitted,
+      name, email, whatsapp, blogWp, blogGeraReceita, perfil, setIsSubmitting, setFormSubmitted,
       utmSource, utmMedium, utmCampaign, utmContent, utmTerm,
       city, state, country, device, currentUrl, clickId, referrer,
       userAgent, screenResolution, timeZone
@@ -69,6 +69,7 @@ export const useFormSubmission = () => {
         const phoneInput = document.getElementById('mauticform_input_appwebstories_telefone') as HTMLTextAreaElement;
         const blogWpSelect = document.getElementById('mauticform_input_appwebstories_app_blogwp') as HTMLSelectElement;
         const blogGeraReceitaSelect = document.getElementById('mauticform_input_appwebstories_gera_receita') as HTMLSelectElement;
+        const perfilSelect = document.getElementById('mauticform_input_appwebstories_perfil') as HTMLSelectElement;
         const utmSourceInput = document.getElementById('mauticform_input_appwebstories_utm_source') as HTMLTextAreaElement;
         const utmMediumInput = document.getElementById('mauticform_input_appwebstories_utm_medium') as HTMLTextAreaElement;
         const utmCampaignInput = document.getElementById('mauticform_input_appwebstories_utm_campaign') as HTMLTextAreaElement;
@@ -121,6 +122,17 @@ export const useFormSubmission = () => {
           console.error('ERRO: Campo blogGeraReceitaSelect não encontrado!');
         }
         
+        // Preenchimento do campo perfil
+        if (perfilSelect) {
+          perfilSelect.value = perfil || '';
+          console.log('=== DEBUG CAMPO PERFIL ===');
+          console.log('Valor atribuído ao perfil:', perfil);
+          console.log('Valor atual do campo perfil:', perfilSelect.value);
+          console.log('==========================');
+        } else {
+          console.error('ERRO: Campo perfilSelect não encontrado!');
+        }
+        
         if (utmSourceInput) utmSourceInput.value = utmSource;
         if (utmMediumInput) utmMediumInput.value = utmMedium;
         if (utmCampaignInput) utmCampaignInput.value = utmCampaign;
@@ -141,12 +153,12 @@ export const useFormSubmission = () => {
             : 'https://cadastro.automatikblog.com/webstories';
         }
         if (clickIdInput) {
-          const cookieClickId = getCookieRaw('rtkclickid-store');
+          const cookieClickId = getCookieRaw('mcclickid-store');
           clickIdInput.value = cookieClickId || clickId;
         }
 
         console.log('Preenchendo formulário Mautic com os dados:', {
-          name, email, whatsapp, blogWp, blogGeraReceita, utmSource, utmMedium, utmCampaign,
+          name, email, whatsapp, blogWp, blogGeraReceita, perfil, utmSource, utmMedium, utmCampaign,
           city, state, country, device, currentUrl
         });
 

@@ -8,6 +8,7 @@ export const useFormData = () => {
   const [whatsapp, setWhatsapp] = useState('');
   const [blogWp, setBlogWp] = useState('');
   const [blogGeraReceita, setBlogGeraReceita] = useState('');
+  const [perfil, setPerfil] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -114,6 +115,7 @@ export const useFormData = () => {
     whatsapp, setWhatsapp,
     blogWp, setBlogWp,
     blogGeraReceita, setBlogGeraReceita,
+    perfil, setPerfil,
     isSubmitting, setIsSubmitting,
     formSubmitted, setFormSubmitted,
     

@@ -204,7 +204,26 @@ export const MauticHiddenForm = () => {
                 </select>
               </div>
               
-              <div id="mauticform_appwebstories_app_plano" className="mauticform-row mauticform-text mauticform-field-16">
+              <div id="mauticform_appwebstories_perfil" className="mauticform-row mauticform-select mauticform-field-16 mauticform-required">
+                <select 
+                  id="mauticform_input_appwebstories_perfil" 
+                  name="mauticform[perfil]" 
+                  defaultValue="" 
+                  className="mauticform-selectbox"
+                >
+                  <option value=""></option>
+                  <option value="Sou dono de negócio">Sou dono de negócio</option>
+                  <option value="Tenho uma agência de marketing">Tenho uma agência de marketing</option>
+                  <option value="Sou especialista em SEO">Sou especialista em SEO</option>
+                  <option value="Sou freelancer">Sou freelancer</option>
+                  <option value="Sou afiliado">Sou afiliado</option>
+                  <option value="Trabalho em agência de marketing">Trabalho em agência de marketing</option>
+                  <option value="Tenho um blog pessoal ou projeto próprio">Tenho um blog pessoal ou projeto próprio</option>
+                  <option value="Tenho um portal de notícias">Tenho um portal de notícias</option>
+                </select>
+              </div>
+              
+              <div id="mauticform_appwebstories_app_plano" className="mauticform-row mauticform-text mauticform-field-17">
                 <input 
                   id="mauticform_input_appwebstories_app_plano" 
                   name="mauticform[app_plano]" 
@@ -260,7 +279,7 @@ export const MauticHiddenForm = () => {
                 />
               </div>
               
-              <div id="mauticform_appwebstories_submit" className="mauticform-row mauticform-button-wrapper mauticform-field-17">
+              <div id="mauticform_appwebstories_submit" className="mauticform-row mauticform-button-wrapper mauticform-field-18">
                 <button 
                   type="submit" 
                   name="mauticform[submit]" 

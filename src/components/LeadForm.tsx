@@ -172,6 +172,27 @@ export const LeadForm = ({ onSubmit }: LeadFormProps) => {
               </Select>
             </div>
 
+            <div className="space-y-2">
+              <Label htmlFor="perfil" className="text-sm font-medium text-gray-700">
+                Qual o seu perfil? *
+              </Label>
+              <Select value={formData.perfil} onValueChange={(value) => formData.setPerfil(value)}>
+                <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-automatik-purple focus:border-transparent">
+                  <SelectValue placeholder="Selecione uma opção" />
+                </SelectTrigger>
+                <SelectContent className="bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                  <SelectItem value="Sou dono de negócio">Sou dono de negócio</SelectItem>
+                  <SelectItem value="Tenho uma agência de marketing">Tenho uma agência de marketing</SelectItem>
+                  <SelectItem value="Sou especialista em SEO">Sou especialista em SEO</SelectItem>
+                  <SelectItem value="Sou freelancer">Sou freelancer</SelectItem>
+                  <SelectItem value="Sou afiliado">Sou afiliado</SelectItem>
+                  <SelectItem value="Trabalho em agência de marketing">Trabalho em agência de marketing</SelectItem>
+                  <SelectItem value="Tenho um blog pessoal ou projeto próprio">Tenho um blog pessoal ou projeto próprio</SelectItem>
+                  <SelectItem value="Tenho um portal de notícias">Tenho um portal de notícias</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
             <Button
               type="submit"
               disabled={formData.isSubmitting}
